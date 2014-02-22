@@ -1,0 +1,27 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Status</th>
+			<th>Date/Time</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{ _.each(orders, function(order){ }}
+			<tr>
+				<td>{{= order.get('id') }}</td>
+				<td>{{= order.get('status') }}</td>
+				<td>{{= order.get('statusDate') }}</td>
+				<td>
+					<i class="glyphicon glyphicon-arrow-right" data-order-id="{{= order.get('id') }}" style="cursor:pointer;" title="Next Stage"></i>							
+				</td>
+			</tr>
+			{{ _.each(order.get('items'), function(orderItem){ }}
+				<tr class="active">
+					<td colspan="4">{{= orderItem.item.id }} - {{= orderItem.item.name }}</td>
+				</tr>
+			{{ }); }}
+		{{ }); }}
+	</tbody>
+</table>
