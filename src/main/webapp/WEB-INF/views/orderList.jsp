@@ -2,11 +2,12 @@
 <html>	
 	<head>
 		<meta charset="UTF-8">
-		<title>Order System</title>
+		<title>Order Frontend System</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 	</head>
 	<body>
-		<div id="order-list-container" class="container">
+		<input type="hidden" id="orderBackendURL" value="<c:out value='${orderBackendURL}'/>">
+		<div id="orderListContainer" class="container">
 			<h1>Order List</h1>
 			<hr />
 			<a href="<c:url value='' />" class="btn btn-primary">Refresh</a>

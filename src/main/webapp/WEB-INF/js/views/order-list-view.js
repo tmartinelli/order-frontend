@@ -4,13 +4,13 @@ define([
   'backbone', 
   'collections/order-collection', 
   'text!templates/order-list-template.html'], 
-function($, _, Backbone, Orders, OrderListTemplate) {
+function($, _, Backbone, OrderCollection, OrderListTemplate) {
 
 		$.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-			options.url = "http://localhost:8080/order-backend/kburger" + options.url; 
+			options.url = $("#orderBackendURL").val() + options.url;
 		});
 		
-		var orders = new Orders();
+		var orders = new OrderCollection();
 		
 		var OrderListView = Backbone.View.extend({
 			el: $(".page"),

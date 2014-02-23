@@ -3,13 +3,10 @@ define([
   'backbone',
 ], function(_, Backbone) {
 
-	var Order = Backbone.Model.extend({
-	    urlRoot: '/order',
-	    defaults: {
-	        status: ''
-	    }
+	var OrderModel = Backbone.Model.extend({
+	    urlRoot: '/order'
 	});
 	
-	return Order;
+	return OrderModel;
 
 });

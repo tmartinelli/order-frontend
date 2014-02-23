@@ -24,6 +24,14 @@
 	<mvc:resources mapping="/css/**" location="/WEB-INF/css/" />
 	<mvc:resources mapping="/fonts/**" location="/WEB-INF/fonts/" />
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/" />
-    <mvc:resources mapping="/templates/**" location="/WEB-INF/templates/" /> 	
+    <mvc:resources mapping="/templates/**" location="/WEB-INF/templates/" />
+    
+	<bean id="propertyPlaceholder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+         <property name="locations">
+            <list>
+                <value>classpath:order-frontend-utils.properties</value>                  
+             </list>
+         </property>
+    </bean>
  
 </beans>

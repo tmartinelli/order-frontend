@@ -4,7 +4,7 @@ define([
   'models/order-model'
 ], function(_, Backbone, Order) {
 
-	var Orders = Backbone.Collection.extend({
+	var OrderCollection = Backbone.Collection.extend({
 		url: "/orders",
 		model: Order,
 		initialize: function() {
@@ -17,6 +17,6 @@ define([
 		}  
 	});
 	
-	return Orders;
+	return OrderCollection;
 
 });
