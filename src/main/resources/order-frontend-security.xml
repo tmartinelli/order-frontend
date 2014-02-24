@@ -7,7 +7,7 @@
 						http://www.springframework.org/schema/security/spring-security-3.2.xsd">
  
 	<http>
-		<intercept-url pattern="/*" access="ROLE_COOK, ROLE_WAITER" />
+		<intercept-url pattern="/**" access="ROLE_COOK, ROLE_WAITER" />
 		<http-basic />
 	</http>
  
